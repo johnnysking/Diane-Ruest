@@ -374,6 +374,17 @@
             border-radius: 4px;
         }
 
+        .contact-item a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
         .contact-item h3 {
             font-size: 1.1rem;
             color: var(--secondary-color);
@@ -433,6 +444,14 @@
             font-style: italic;
             margin-bottom: 1rem;
             border-radius: 4px;
+        }
+
+        .modal-image img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
         }
 
         .close-modal {
@@ -622,7 +641,7 @@
         <div class="container">
             <h2 class="section-title fade-in">Œuvres</h2>
             <div class="gallery-grid">
-                <div class="artwork-card fade-in" onclick="openModal('Fragments de mémoire', '2023, Lin et soie sauvage, 120x80cm', 'Série explorant les traces du temps sur la matière textile')">
+                <div class="artwork-card fade-in" onclick="openModal('Fragments de mémoire', '2023, Lin et soie sauvage, 120x80cm', 'Série explorant les traces du temps sur la matière textile', 'assets/52x74(1).JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title">Fragments de mémoire</h3>
@@ -631,7 +650,7 @@
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Échos silencieux', '2022, Chanvre et teinture indigo, 90x120cm', 'Recherche sur la transmission des savoir-faire')">
+                <div class="artwork-card fade-in" onclick="openModal('Échos silencieux', '2022, Chanvre et teinture indigo, 90x120cm', 'Recherche sur la transmission des savoir-faire', 'assets/100_ lin 29 x 51 droite.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title">Échos silencieux</h3>
@@ -640,7 +659,7 @@
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Murmures du lin', '2023, Lin brut et dorure à la feuille, 60x80cm', 'Dialogue entre tradition et modernité')">
+                <div class="artwork-card fade-in" onclick="openModal('Murmures du lin', '2023, Lin brut et dorure à la feuille, 60x80cm', 'Dialogue entre tradition et modernité', 'assets/100_ lin 29x51 gauche.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title">Murmures du lin</h3>
@@ -649,7 +668,7 @@
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Seuils', '2021, Installation textile variable, Dimensions variables', 'Installation monumentale sur la notion de passage')">
+                <div class="artwork-card fade-in" onclick="openModal('Seuils', '2021, Installation textile variable, Dimensions variables', 'Installation monumentale sur la notion de passage', 'assets/DSC01387 (2).JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title">Seuils</h3>
@@ -658,7 +677,7 @@
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Entrelacs temporels', '2022, Laine feutrée et fils de soie, 100x150cm', 'Méditation sur le temps qui passe')">
+                <div class="artwork-card fade-in" onclick="openModal('Entrelacs temporels', '2022, Laine feutrée et fils de soie, 100x150cm', 'Méditation sur le temps qui passe', 'assets/Lin et coton 22X69po.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title">Entrelacs temporels</h3>
@@ -667,7 +686,7 @@
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales')">
+                <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales', 'assets/Lin et coton 50x60po (2).JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title">Traces végétales</h3>
@@ -676,30 +695,30 @@
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales')">
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 2', '', '', 'assets/Cache-pot 2.jpg')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Traces végétales</h3>
-                        <p class="artwork-details">2023 • Coton bio et pigments • 80×100 cm</p>
-                        <p class="artwork-description">Teinture végétale et impression textile</p>
+                        <h3 class="artwork-title">Cache-pot 2</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales')">
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 1', '', '', 'assets/Cache-pot 1.jpg')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Traces végétales</h3>
-                        <p class="artwork-details">2023 • Coton bio et pigments • 80×100 cm</p>
-                        <p class="artwork-description">Teinture végétale et impression textile</p>
+                        <h3 class="artwork-title">Cache-pot 1</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales')">
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 3.jpg')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Traces végétales</h3>
-                        <p class="artwork-details">2023 • Coton bio et pigments • 80×100 cm</p>
-                        <p class="artwork-description">Teinture végétale et impression textile</p>
+                        <h3 class="artwork-title">Cache-pot 3</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
                     </div>
                 </div>
             </div>
@@ -721,12 +740,15 @@
                     
                     <div class="contact-item">
                         <h3>Contact</h3>
-                        <p>diane@dianedcogreen.ca<br>téléphone</p>
+                        <p>diane@dianedcogreen.ca<!--<br>téléphone</p>-->
                     </div>
                     
                     <div class="contact-item">
                         <h3>Réseaux</h3>
-                        <p>Instagram @Diane Ruest<br>LinkedIn Diane Ruest</p>
+                        <p>
+                          <a href="https://www.instagram.com/diane_decogreen/" target="_blank" rel="noopener">Instagram</a><br>
+                          <a href="https://www.facebook.com/diane.ruest.72651" target="_blank" rel="noopener">Facebook</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -744,7 +766,9 @@
     <div id="artworkModal" class="modal">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal()">&times;</button>
-            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-image" id="modalImageContainer">
+                <img id="modalImage" src="" alt="" />
+            </div>
             <h3 id="modalTitle"></h3>
             <p id="modalDetails"></p>
             <p id="modalDescription"></p>
@@ -785,7 +809,7 @@
         });
 
         // Fonctions modal
-        function openModal(title, details, description) {
+        function openModal(title, details, description, imageUrl) {
             const modal = document.getElementById('artworkModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDetails = document.getElementById('modalDetails');
@@ -795,8 +819,8 @@
             modalTitle.textContent = title;
             modalDetails.textContent = details;
             modalDescription.textContent = description;
-            modalImage.textContent = title;
-            
+            modalImage.src = imageUrl || '';
+            modalImage.alt = title;
             
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
