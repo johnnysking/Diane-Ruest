@@ -500,37 +500,6 @@
                 gap: 1.5rem;
             }
 
-           @media (max-width: 600px) {
-            .nav-container {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            .navbar ul {
-                padding-left: 12vw;
-                padding-right: 8vw;
-                box-sizing: border-box;
-                font-size: 0.95rem;
-                gap: 0.5rem;
-            }
-            .navbar ul li {
-                width: 100%;
-            }
-            .navbar ul li a {
-                display: block;
-                white-space: nowrap;
-                padding: 10px 0;
-                font-size: 0.98rem;
-                text-align: left;
-                box-sizing: border-box;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-            .nav-container {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -548,7 +517,7 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-        
+        }
 
         /* Animations */
         .fade-in {
@@ -561,11 +530,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        @media (max-width: 600px) {
-    .navbar ul li:last-child a {
-        padding-right: 24px !important; /* ou plus si tu veux encore plus d'espace */
-    }
-}
     </style>
 </head>
 <body>
@@ -827,7 +791,7 @@
                 <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Mini coeur.jpg')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title"></h3>
+                        <h3 class="artwork-title">Cache-pot 3</h3>
                         <p class="artwork-details"></p>
                         <p class="artwork-description"></p>
                     </div>
