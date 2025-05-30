@@ -311,15 +311,39 @@
         }
 
         .artwork-card:nth-child(7) .artwork-image {
-            background-image: url('assets/Cache-pot\ 2.jpg');
+            background-image: url('assets/Foret\ urbaine-\ linet\ coton\ sur\ lin\ 41x29po.JPG');
         }
 
         .artwork-card:nth-child(8) .artwork-image {
-            background-image: url('assets/Cache-pot\ 1.jpg');
+            background-image: url('assets/Champ_de_lavande.JPG');
         }
 
         .artwork-card:nth-child(9) .artwork-image {
+            background-image: url('assets/Les_couleurs_du_jour.JPG');
+        }
+
+        .artwork-card:nth-child(10) .artwork-image {
+            background-image: url('assets/Cache-pot\ 2.jpg');
+        }
+
+        .artwork-card:nth-child(11) .artwork-image {
+            background-image: url('assets/Cache-pot\ 1.jpg');
+        }
+
+        .artwork-card:nth-child(12) .artwork-image {
             background-image: url('assets/Cache-pot\ 3.jpg');
+        }
+
+        .artwork-card:nth-child(13) .artwork-image {
+            background-image: url('assets/20241112_091841.jpg');
+        }
+
+        .artwork-card:nth-child(14) .artwork-image {
+            background-image: url('assets/Coeurs\ rouge.jpg');
+        }
+
+        .artwork-card:nth-child(15) .artwork-image {
+            background-image: url('assets/Mini\ coeur.jpg');
         }
 
         /* Effet hover */
@@ -476,6 +500,37 @@
                 gap: 1.5rem;
             }
 
+           @media (max-width: 600px) {
+            .nav-container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .navbar ul {
+                padding-left: 12vw;
+                padding-right: 8vw;
+                box-sizing: border-box;
+                font-size: 0.95rem;
+                gap: 0.5rem;
+            }
+            .navbar ul li {
+                width: 100%;
+            }
+            .navbar ul li a {
+                display: block;
+                white-space: nowrap;
+                padding: 10px 0;
+                font-size: 0.98rem;
+                text-align: left;
+                box-sizing: border-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+            .nav-container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -493,7 +548,7 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-        }
+        
 
         /* Animations */
         .fade-in {
@@ -506,6 +561,11 @@
             opacity: 1;
             transform: translateY(0);
         }
+        @media (max-width: 600px) {
+    .navbar ul li:last-child a {
+        padding-right: 24px !important; /* ou plus si tu veux encore plus d'espace */
+    }
+}
     </style>
 </head>
 <body>
@@ -536,16 +596,16 @@
     <!-- Section À propos -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title fade-in">À Propos</h2>
+            <h2 class="section-title fade-in">À propos</h2>
             <div class="about-content">
                 <div class="about-text fade-in">
                     <p>Je suis issue d’une famille de couturières, de femmes inspirantes aimantes, créatives. Récupérer et donner une deuxième vie aux tissus est dans mon ADN. Autodidacte, j’ai décousu des centaines de vêtements pour comprendre leur construction.</p>
                     
-                    <p>Passionnée de tissus, de textures, de couleurs, de motifs, j’aime les toucher pour m’en imprégner et m’inspirer. Les idées ne manquent pas. Le travail répétitif, la production en chaîne ce n’est pas pour moi. </p>
+                    <p>Passionnée de tissus, de textures, de couleurs, de motifs, j’aime les toucher pour m’en imprégner et m’inspirer. Les idées ne manquent pas. Le travail répétitif, la production en chaîne, ce n’est pas pour moi. </p>
                     
                     <p>La nature est ma source première d’inspiration, celle qui m’entoure, que je vois tous les jours par la fenêtre de mon atelier, le chant du cardinal ou merle, les couleurs du lever du jour, le bleu du ciel. </p>
 
-                    <p>Mon travail se rapproche d’un arrêt sur image des choses que j’aime et de celles que j’ai vues au cours de mes voyages autant au bord de la mer qu’en forêt. Je capte les idées qui vagabondent dans ma tête pour les recomposer de bouts tissus et de fils colorés. </p>
+                    <p>Mon travail se rapproche d’un arrêt sur image des choses que j’aime et de celles que j’ai vues au cours de mes voyages autant au bord de la mer qu’en forêt. Je capte les idées qui vagabondent dans ma tête pour les recomposer de bouts de tissus et de fils colorés. </p>
                    
                 </div>
                 <div class="about-image fade-in">
@@ -558,7 +618,7 @@
     <!-- Démarche artistique -->
     <section id="approach" class="artistic-approach">
         <div class="container">
-            <h2 class="section-title fade-in">Démarche Artistique</h2>
+            <h2 class="section-title fade-in">Démarche artistique</h2>
             <div class="approach-content fade-in">
                 <p>Il reste au fond de mon esprit des fragments de balades en voiture, des bouts de nature, des couleurs de levers et de couchers de soleil, le bleu de la mer, du ciel</p>
 
@@ -568,7 +628,7 @@
 
                 <p>Je suis fascinée par la mort et par le fait même par la vie aussi. La résilience de l’être humain, la force de la nature qui nourrit, éblouit, apaise, confronte, nous invite au voyage, au silence, à la méditation, au repos, au plaisir. </p>
 
-                <p>En plus de la machine à coudre dont je joue depuis mon enfance j’ai ajouté le lent, calme et silencieux travail de points faits à l’aiguille. Cette méditation quotidienne se fait avec mes tissus naturels de prédilection soit le lin, merveilleux tissu doux et rigide, le coton souple, la douce soie et la chaleureuse laine. Mes créations se forment au contact des bouts de tissus que mes mains prennent au hasard, des couleurs de fils qui me sourient.</p>
+                <p>En plus de la machine à coudre avec laquelle je joue depuis mon enfance, j’ai ajouté le lent, calme et silencieux travail de points faits à l’aiguille. Cette méditation quotidienne se fait avec mes tissus naturels de prédilection soit le lin, merveilleux tissu doux et rigide, le coton souple, la douce soie et la chaleureuse laine. Mes créations se forment au contact des bouts de tissus que mes mains prennent au hasard, des couleurs de fils qui me sourient.</p>
 
                 <p>Je fais les choses à ma façon parce que c’est la seule qui me convient, qui me laisse toute la liberté dont j’ai besoin. Mon travail est instinctif, parfois conventionnel. Je traite le tissu selon ce qu’il m’inspire ou me rappelle. Mes sujets sont simples, réels, infinis et pourtant aussi différents que tous les paysages qui nourrissent mes souvenirs. </p>
 
@@ -641,70 +701,97 @@
                 <div class="artwork-card fade-in" onclick="openModal('Fragments de mémoire', '2023, Lin et soie sauvage, 120x80cm', 'Série explorant les traces du temps sur la matière textile', 'assets/52x74(1).JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Fragments de mémoire</h3>
-                        <p class="artwork-details">2023 • Lin et soie sauvage • 120×80 cm</p>
-                        <p class="artwork-description">Tissage contemporain aux pigments végétaux</p>
+                        <h3 class="artwork-title">Titre?</h3>
+                        <p class="artwork-details">2023 • Matériel?</p>
+                        <p class="artwork-description">132,08 x 187,96 cm</p>
                     </div>
                 </div>
 
                 <div class="artwork-card fade-in" onclick="openModal('Échos silencieux', '2022, Chanvre et teinture indigo, 90x120cm', 'Recherche sur la transmission des savoir-faire', 'assets/100_ lin 29 x 51 droite.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Échos silencieux</h3>
-                        <p class="artwork-details">2022 • Chanvre et teinture indigo • 90×120 cm</p>
-                        <p class="artwork-description">Tapisserie contemporaine technique mixte</p>
+                        <h3 class="artwork-title">Titre?</h3>
+                        <p class="artwork-details">Lin</p>
+                        <p class="artwork-description">73,66 x 129,54 cm</p>
                     </div>
                 </div>
 
                 <div class="artwork-card fade-in" onclick="openModal('Murmures du lin', '2023, Lin brut et dorure à la feuille, 60x80cm', 'Dialogue entre tradition et modernité', 'assets/100_ lin 29x51 gauche.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Murmures du lin</h3>
-                        <p class="artwork-details">2023 • Lin brut et dorure • 60×80 cm</p>
-                        <p class="artwork-description">Broderie sur toile de lin naturel</p>
+                        <h3 class="artwork-title">Titre?</h3>
+                        <p class="artwork-details">Lin</p>
+                        <p class="artwork-description">73,66 x 129,54 cm</p>
                     </div>
                 </div>
 
                 <div class="artwork-card fade-in" onclick="openModal('Seuils', '2021, Installation textile variable, Dimensions variables', 'Installation monumentale sur la notion de passage', 'assets/DSC01387 (2).JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Seuils</h3>
-                        <p class="artwork-details">2021 • Installation textile • Dimensions variables</p>
-                        <p class="artwork-description">Fibres naturelles et structures métalliques</p>
+                        <h3 class="artwork-title">Titre?</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
                     </div>
                 </div>
 
                 <div class="artwork-card fade-in" onclick="openModal('Entrelacs temporels', '2022, Laine feutrée et fils de soie, 100x150cm', 'Méditation sur le temps qui passe', 'assets/Lin et coton 22X69po.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Entrelacs temporels</h3>
-                        <p class="artwork-details">2022 • Laine feutrée et soie • 100×150 cm</p>
-                        <p class="artwork-description">Feutrage et tissage contemporain</p>
+                        <h3 class="artwork-title">Titre?</h3>
+                        <p class="artwork-details">Lin et coton</p>
+                        <p class="artwork-description">55,88 x 175,26 cm</p>
                     </div>
                 </div>
 
                 <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales', 'assets/Lin et coton 50x60po (2).JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Traces végétales</h3>
-                        <p class="artwork-details">2023 • Coton bio et pigments • 80×100 cm</p>
-                        <p class="artwork-description">Teinture végétale et impression textile</p>
+                        <h3 class="artwork-title">Titre?</h3>
+                        <p class="artwork-details">Lin et coton</p>
+                        <p class="artwork-description">127 x 152,4 cm</p>
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 2', '', '', 'assets/Cache-pot 2.jpg')">
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 2', '', '', 'assets/Foret urbaine- linet coton sur lin 41x29po.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Cache-pot 2</h3>
+                        <h3 class="artwork-title">Fôret urbaine</h3>
+                        <p class="artwork-details">Lin et coton </p>
+                        <p class="artwork-description">104,1 x 73,7 cm</p>
+                    </div>
+                </div>
+
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 1', '', '', 'assets/Champ_de_lavande.JPG')">
+                    <div class="artwork-image"></div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Champ de lavande</h3>
                         <p class="artwork-details"></p>
                         <p class="artwork-description"></p>
                     </div>
                 </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 1', '', '', 'assets/Cache-pot 1.jpg')">
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Les couleurs du jour.JPG')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Cache-pot 1</h3>
+                        <h3 class="artwork-title">Les couleurs de jour</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
+                    </div>
+                </div>
+
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 2.jpg')">
+                    <div class="artwork-image"></div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Cache-pot</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
+                    </div>
+                </div>
+
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 1.jpg')">
+                    <div class="artwork-image"></div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Cache-pot</h3>
                         <p class="artwork-details"></p>
                         <p class="artwork-description"></p>
                     </div>
@@ -713,7 +800,34 @@
                 <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 3.jpg')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
-                        <h3 class="artwork-title">Cache-pot 3</h3>
+                        <h3 class="artwork-title">Cache-pot</h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
+                    </div>
+                </div>
+
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/20241112_091841.jpg')">
+                    <div class="artwork-image"></div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title"></h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
+                    </div>
+                </div>
+
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Coeurs rouge.jpg')">
+                    <div class="artwork-image"></div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title"></h3>
+                        <p class="artwork-details"></p>
+                        <p class="artwork-description"></p>
+                    </div>
+                </div>
+
+                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Mini coeur.jpg')">
+                    <div class="artwork-image"></div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title"></h3>
                         <p class="artwork-details"></p>
                         <p class="artwork-description"></p>
                     </div>
@@ -727,7 +841,7 @@
         <div class="container">
             <h2 class="section-title fade-in">Contact</h2>
             <div class="contact-content fade-in">
-                <p>Pour toute demande d'information, commande ou collaboration, n'hésitez pas à me contacter.</p>
+                <p>Pour toute information, que ce soit concernant les tarifs, la disponibilité, une commande ou une collaboration, n’hésitez pas à me contacter.</p>
                 
                 <div class="contact-info">
                     <!--<div class="contact-item">
