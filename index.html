@@ -1,178 +1,181 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diane Ruest - Artiste Textile</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        :root {
-            --primary-color: #2c2c2c;
-            --secondary-color: #8b7355;
-            --accent-color: #d4af8c;
-            --text-dark: #333;
-            --text-light: #666;
-            --text-muted: #999;
-            --bg-light: #fafafa;
-            --bg-white: #ffffff;
-            --border-light: #e8e8e8;
-        }
+      :root {
+        --primary-color: #2c2c2c;
+        --secondary-color: #8b7355;
+        --accent-color: #d4af8c;
+        --text-dark: #333;
+        --text-light: #666;
+        --text-muted: #999;
+        --bg-light: #fafafa;
+        --bg-white: #ffffff;
+        --border-light: #e8e8e8;
+      }
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--bg-white);
-        }
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: var(--bg-white);
+      }
 
-        /* Navigation épurée */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-light);
-            padding: 20px 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
+      /* Navigation épurée */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-light);
+        padding: 20px 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--primary-color);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--primary-color);
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
 
-        .navbar ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+      }
 
-        .navbar a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            letter-spacing: 0.5px;
-        }
+      .navbar a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+        letter-spacing: 0.5px;
+      }
 
-        .navbar a:hover {
-            color: var(--secondary-color);
-        }
+      .navbar a:hover {
+        color: var(--secondary-color);
+      }
 
-        /* Section Hero minimaliste */
-        .hero {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><rect width="1000" height="1000" fill="%23fafafa"/><g opacity="0.1"><path d="M0,200 Q250,150 500,200 T1000,200 V1000 H0 Z" fill="%23d4af8c"/></g></svg>');
-            background-size: cover;
-            margin-top: 80px;
-        }
+      /* Section Hero minimaliste */
+      .hero {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.8)
+          ),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><rect width="1000" height="1000" fill="%23fafafa"/><g opacity="0.1"><path d="M0,200 Q250,150 500,200 T1000,200 V1000 H0 Z" fill="%23d4af8c"/></g></svg>');
+        background-size: cover;
+        margin-top: 80px;
+      }
 
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 300;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
+      .hero-content h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 300;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+      }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
+      .hero-content p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        font-weight: 300;
+      }
 
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 2px solid var(--secondary-color);
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 300;
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
-            font-size: 0.95rem;
-        }
+      .cta-button {
+        display: inline-block;
+        padding: 12px 30px;
+        border: 2px solid var(--secondary-color);
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: 300;
+        transition: all 0.3s ease;
+        letter-spacing: 1px;
+        font-size: 0.95rem;
+      }
 
-        .cta-button:hover {
-            background: var(--secondary-color);
-            color: white;
-        }
+      .cta-button:hover {
+        background: var(--secondary-color);
+        color: white;
+      }
 
-        /* Sections */
-        section {
-            padding: 80px 0;
-        }
+      /* Sections */
+      section {
+        padding: 80px 0;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 300;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-            letter-spacing: 1px;
-        }
+      .section-title {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        color: var(--primary-color);
+        letter-spacing: 1px;
+      }
 
-        /* Section À propos */
-        .about {
-            background: var(--bg-light);
-        }
+      /* Section À propos */
+      .about {
+        background: var(--bg-light);
+      }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
 
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-        }
+      .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-light);
+      }
 
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
+      .about-text p {
+        margin-bottom: 1.5rem;
+      }
 
-        .about-image {
+      .about-image {
         width: 100%;
         height: 400px;
         background: url(assets/Doncaster.jpg) no-repeat center;
         background-size: contain;
-        background-color: var(--accent-color); /* garde ta couleur de fond */
+        background-color: var(--bg-light);
         border-radius: 4px;
         display: flex;
         align-items: center;
@@ -180,160 +183,167 @@
         color: white;
         font-size: 1.1rem;
         font-style: italic;
-    }
+      }
 
+      /* Démarche artistique */
+      .artistic-approach {
+        background: var(--bg-white);
+      }
 
-        /* Démarche artistique */
-        .artistic-approach {
-            background: var(--bg-white);
-        }
+      .approach-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
 
-        .approach-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+      .approach-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+      }
 
-        .approach-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
+      .approach-highlight {
+        background: var(--bg-light);
+        padding: 2rem;
+        border-left: 4px solid var(--secondary-color);
+        margin: 2rem 0;
+        font-style: italic;
+      }
 
-        .approach-highlight {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-left: 4px solid var(--secondary-color);
-            margin: 2rem 0;
-            font-style: italic;
-        }
+      /* Parcours */
+      .journey {
+        background: var(--bg-light);
+      }
 
-        /* Parcours */
-        .journey {
-            background: var(--bg-light);
-        }
+      .timeline {
+        max-width: 800px;
+        margin: 0 auto;
+      }
 
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+      .timeline-item {
+        display: flex;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--bg-white);
+        border-radius: 4px;
+        border-left: 4px solid var(--accent-color);
+      }
 
-        .timeline-item {
-            display: flex;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--bg-white);
-            border-radius: 4px;
-            border-left: 4px solid var(--accent-color);
-        }
+      .timeline-year {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--secondary-color);
+        min-width: 80px;
+        margin-right: 2rem;
+      }
 
-        .timeline-year {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--secondary-color);
-            min-width: 80px;
-            margin-right: 2rem;
-        }
+      .timeline-content h3 {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+      }
 
-        .timeline-content h3 {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
+      .timeline-content p {
+        color: var(--text-light);
+        line-height: 1.6;
+      }
 
-        .timeline-content p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
+      /* Galerie d'œuvres */
+      .gallery {
+        background: var(--bg-white);
+      }
 
-        /* Galerie d'œuvres */
-        .gallery {
-            background: var(--bg-white);
-        }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+      .artwork-card {
+        background: var(--bg-white);
+        border: 1px solid var(--border-light);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
 
-        .artwork-card {
-            background: var(--bg-white);
-            border: 1px solid var(--border-light);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+      .artwork-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
 
-        .artwork-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
+      .artwork-image {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; /* ← actuel */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: white;
+        font-style: italic;
+      }
 
-        .artwork-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain; /* ← actuel */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: white;
-            font-style: italic;
-        }
+      .artwork-card:nth-child(1) .artwork-image {
+        background-image: url("assets/52x74\(1\).JPG");
+      }
 
-        .artwork-card:nth-child(1) .artwork-image {
-        background-image: url('assets/52x74\(1\).JPG');
-        }
+      .artwork-card:nth-child(2) .artwork-image {
+        background-image: url("assets/100_\ lin\ 29x51\ gauche.JPG");
+      }
 
-        .artwork-card:nth-child(2) .artwork-image {
-            background-image: url('assets/100_\ lin\ 29\ x\ 51\ droite.JPG');
-        }
+      .artwork-card:nth-child(3) .artwork-image {
+        background-image: url("assets/100_\ lin\ 29\ x\ 51\ droite.JPG");
+      }
 
-        .artwork-card:nth-child(3) .artwork-image {
-            background-image: url('assets/100_\ lin\ 29x51\ gauche.JPG');
-        }
+      .artwork-card:nth-child(4) .artwork-image {
+        background-image: url("assets/DSC01387\ \(2\).JPG");
+      }
 
-        .artwork-card:nth-child(4) .artwork-image {
-            background-image: url('assets/DSC01387\ \(2\).JPG');
-        }
+      .artwork-card:nth-child(5) .artwork-image {
+        background-image: url("assets/Lin\ et\ coton\ 22X69po.JPG");
+      }
 
-        .artwork-card:nth-child(5) .artwork-image {
-            background-image: url('assets/Lin\ et\ coton\ 22X69po.JPG');
-        }
+      .artwork-card:nth-child(6) .artwork-image {
+        background-image: url("assets/bord_de_mer.JPG");
+      }
 
-        .artwork-card:nth-child(6) .artwork-image {
-            background-image: url('assets/Lin\ et\ coton\ 50x60po\ \(2\).JPG');
-        }
+      .artwork-card:nth-child(7) .artwork-image {
+        background-image: url("assets/Foret\ urbaine-\ linet\ coton\ sur\ lin\ 41x29po.JPG");
+      }
 
-        .artwork-card:nth-child(7) .artwork-image {
-            background-image: url('assets/Foret\ urbaine-\ linet\ coton\ sur\ lin\ 41x29po.JPG');
-        }
+      .artwork-card:nth-child(8) .artwork-image {
+        background-image: url("assets/Champ_de_lavande.JPG");
+      }
 
-        .artwork-card:nth-child(8) .artwork-image {
-            background-image: url('assets/Champ_de_lavande.JPG');
-        }
+      .artwork-card:nth-child(9) .artwork-image {
+        background-image: url("assets/Les_couleurs_du_jour.JPG");
+      }
 
-        .artwork-card:nth-child(9) .artwork-image {
-            background-image: url('assets/Les_couleurs_du_jour.JPG');
-        }
+      .artwork-card:nth-child(10) .artwork-image {
+        background-image: url("assets/Soleil\ du\ désert\ 40x71.JPG");
+      }
 
-        .artwork-card:nth-child(10) .artwork-image {
-            background-image: url('assets/Cache-pot\ 2.jpg');
-        }
+      .artwork-card:nth-child(11) .artwork-image {
+        background-image: url("assets/Cache-pot\ 2.jpg");
+      }
 
-        .artwork-card:nth-child(11) .artwork-image {
-            background-image: url('assets/Cache-pot\ 1.jpg');
-        }
+      .artwork-card:nth-child(12) .artwork-image {
+        background-image: url("assets/Cache-pot\ 1.jpg");
+      }
 
-        .artwork-card:nth-child(12) .artwork-image {
-            background-image: url('assets/Cache-pot\ 3.jpg');
-        }
-
+      .artwork-card:nth-child(13) .artwork-image {
+        background-image: url("assets/Cache-pot\ 3.jpg");
+      }
+      /* 
         .artwork-card:nth-child(13) .artwork-image {
             background-image: url('assets/20241112_091841.jpg');
         }
@@ -344,261 +354,336 @@
 
         .artwork-card:nth-child(15) .artwork-image {
             background-image: url('assets/Mini\ coeur.jpg');
+        } */
+
+      /* Effet hover */
+      .artwork-card:hover .artwork-image {
+        transform: scale(1.02);
+      }
+
+      .artwork-info {
+        padding: 1.5rem;
+      }
+
+      .artwork-title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .artwork-details {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .artwork-description {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      /* Contact */
+      .contact {
+        background: var(--bg-light);
+      }
+
+      .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .contact-item {
+        padding: 1.5rem;
+        background: var(--bg-white);
+        border-radius: 4px;
+      }
+
+      .contact-item a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 300;
+        transition: color 0.3s;
+      }
+      .contact-item a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+
+      .contact-item h3 {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      .contact-item p {
+        color: var(--text-light);
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--primary-color);
+        color: var(--bg-light);
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      .footer p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+      }
+
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--bg-white);
+        padding: 2rem;
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 4px;
+      }
+
+      .modal-image {
+        width: 100%;
+        max-height: 500px;
+        background: #faf6f1; /* blanc uni */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-style: italic;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+      }
+
+      .modal-image img {
+        max-width: 100%;
+        max-height: 500px;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          gap: 1rem;
         }
 
-        /* Effet hover */
-        .artwork-card:hover .artwork-image {
-            transform: scale(1.02);
+        .navbar ul {
+          gap: 1.5rem;
         }
 
-        .artwork-info {
-            padding: 1.5rem;
+        .about-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
 
-        .artwork-title {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
+        .timeline-item {
+          flex-direction: column;
         }
 
-        .artwork-details {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+        .timeline-year {
+          margin-bottom: 1rem;
+          margin-right: 0;
         }
 
-        .artwork-description {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
+        .gallery-grid {
+          grid-template-columns: 1fr;
         }
+      }
 
-        /* Contact */
-        .contact {
-            background: var(--bg-light);
-        }
+      /* Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
 
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #backToTop {
+        position: fixed;
+        bottom: 32px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: none;
+        background: var(--secondary-color);
+        color: #fff;
+        font-size: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 3000;
+      }
+      #backToTop:hover {
+        background: var(--primary-color);
+      }
+      #backToTop.visible {
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            padding: 1.5rem;
-            background: var(--bg-white);
-            border-radius: 4px;
-        }
-
-        .contact-item a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 300;
-            transition: color 0.3s;
-        }
-        .contact-item a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
-
-        .contact-item h3 {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .contact-item p {
-            color: var(--text-light);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--primary-color);
-            color: var(--bg-light);
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--bg-white);
-            padding: 2rem;
-            max-width: 80%;
-            max-height: 80%;
-            border-radius: 4px;
-        }
-
-        .modal-image {
-            width: 100%;
-            max-height: 500px;
-            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-style: italic;
-            margin-bottom: 1rem;
-            border-radius: 4px;
-        }
-
-        .modal-image img {
-            max-width: 100%;
-            max-height: 500px;
-            border-radius: 4px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .navbar ul {
-                gap: 1.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .timeline-item {
-                flex-direction: column;
-            }
-
-            .timeline-year {
-                margin-bottom: 1rem;
-                margin-right: 0;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      #one-artwork-middle {
+        grid-column: 1 / -1;
+        /* Pour la mettre au centre si plusieurs colonnes */
+        margin-left: auto;
+        margin-right: auto;
+        /* Optionnel : tu peux augmenter la largeur max sur grand écran */
+        max-width: 600px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="logo">Diane Ruest</a>
-            <ul>
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#approach">Démarche</a></li>
-                <!--<li><a href="#journey">Parcours</a></li>-->
-                <li><a href="#gallery">Œuvres</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <a href="#hero" class="logo">Diane Ruest</a>
+        <ul>
+          <!--<li><a href="#hero">Accueil</a></li>-->
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#approach">Démarche</a></li>
+          <!--<li><a href="#journey">Parcours</a></li>-->
+          <li><a href="#gallery">Œuvres</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Diane Ruest</h1>
-            <p>Artiste Textile Contemporaine</p>
-            <a href="#gallery" class="cta-button">Découvrir les créations</a>
-        </div>
+      <div class="hero-content">
+        <h1>Diane Ruest</h1>
+        <p>Artiste Textile Contemporaine</p>
+        <a href="#gallery" class="cta-button">Découvrir les créations</a>
+      </div>
     </section>
 
     <!-- Section À propos -->
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title fade-in">À propos</h2>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <p>Je suis issue d’une famille de couturières, de femmes inspirantes aimantes, créatives. Récupérer et donner une deuxième vie aux tissus est dans mon ADN. Autodidacte, j’ai décousu des centaines de vêtements pour comprendre leur construction.</p>
-                    
-                    <p>Passionnée de tissus, de textures, de couleurs, de motifs, j’aime les toucher pour m’en imprégner et m’inspirer. Les idées ne manquent pas. Le travail répétitif, la production en chaîne, ce n’est pas pour moi. </p>
-                    
-                    <p>La nature est ma source première d’inspiration, celle qui m’entoure, que je vois tous les jours par la fenêtre de mon atelier, le chant du cardinal ou merle, les couleurs du lever du jour, le bleu du ciel. </p>
+      <div class="container">
+        <!--<h2 class="section-title fade-in">À propos</h2>-->
+        <div class="about-content">
+          <div class="about-text fade-in">
+            <p>
+              Je suis issue d’une famille de couturières, de femmes inspirantes
+              aimantes, créatives. Récupérer et donner une deuxième vie aux
+              tissus est dans mon ADN. Autodidacte, j’ai décousu des centaines
+              de vêtements pour comprendre leur construction.
+            </p>
 
-                    <p>Mon travail se rapproche d’un arrêt sur image des choses que j’aime et de celles que j’ai vues au cours de mes voyages autant au bord de la mer qu’en forêt. Je capte les idées qui vagabondent dans ma tête pour les recomposer de bouts de tissus et de fils colorés. </p>
-                   
-                </div>
-                <div class="about-image fade-in">
-                    <!--Portrait de l'artiste dans son atelier-->
-                </div>
-            </div>
+            <p>
+              Passionnée de tissus, de textures, de couleurs, de motifs, j’aime
+              les toucher pour m’en imprégner et m’inspirer. Les idées ne
+              manquent pas. Le travail répétitif, la production en chaîne, ce
+              n’est pas pour moi.
+            </p>
+
+            <p>
+              La nature est ma source première d’inspiration, celle qui
+              m’entoure, que je vois tous les jours par la fenêtre de mon
+              atelier, le chant du cardinal ou merle, les couleurs du lever du
+              jour, le bleu du ciel.
+            </p>
+
+            <p>
+              Mon travail se rapproche d’un arrêt sur image des choses que
+              j’aime et de celles que j’ai vues au cours de mes voyages autant
+              au bord de la mer qu’en forêt. Je capte les idées qui vagabondent
+              dans ma tête pour les recomposer de bouts de tissus et de fils
+              colorés.
+            </p>
+          </div>
+          <div class="about-image fade-in">
+            <!--Portrait de l'artiste dans son atelier-->
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Démarche artistique -->
     <section id="approach" class="artistic-approach">
-        <div class="container">
-            <h2 class="section-title fade-in">Démarche artistique</h2>
-            <div class="approach-content fade-in">
-                <p>Il reste au fond de mon esprit des fragments de balades en voiture, des bouts de nature, des couleurs de levers et de couchers de soleil, le bleu de la mer, du ciel</p>
+      <div class="container">
+        <h2 class="section-title fade-in">Démarche artistique</h2>
+        <div class="approach-content fade-in">
+          <p>
+            Il reste au fond de mon esprit des fragments de balades en voiture,
+            des bouts de nature, des couleurs de levers et de couchers de
+            soleil, le bleu de la mer, du ciel
+          </p>
 
-                <div class="approach-highlight">
-                    "Toute vision est éphémère. "
-                </div>
+          <div class="approach-highlight">"Toute vision est éphémère. "</div>
 
-                <p>Je suis fascinée par la mort et par le fait même par la vie aussi. La résilience de l’être humain, la force de la nature qui nourrit, éblouit, apaise, confronte, nous invite au voyage, au silence, à la méditation, au repos, au plaisir. </p>
+          <p>
+            Je suis fascinée par la mort et par le fait même par la vie aussi.
+            La résilience de l’être humain, la force de la nature qui nourrit,
+            éblouit, apaise, confronte, nous invite au voyage, au silence, à la
+            méditation, au repos, au plaisir.
+          </p>
 
-                <p>En plus de la machine à coudre avec laquelle je joue depuis mon enfance, j’ai ajouté le lent, calme et silencieux travail de points faits à l’aiguille. Cette méditation quotidienne se fait avec mes tissus naturels de prédilection soit le lin, merveilleux tissu doux et rigide, le coton souple, la douce soie et la chaleureuse laine. Mes créations se forment au contact des bouts de tissus que mes mains prennent au hasard, des couleurs de fils qui me sourient.</p>
+          <p>
+            En plus de la machine à coudre avec laquelle je joue depuis mon
+            enfance, j’ai ajouté le lent, calme et silencieux travail de points
+            faits à l’aiguille. Cette méditation quotidienne se fait avec mes
+            tissus naturels de prédilection soit le lin, merveilleux tissu doux
+            et rigide, le coton souple, la douce soie et la chaleureuse laine.
+            Mes créations se forment au contact des bouts de tissus que mes
+            mains prennent au hasard, des couleurs de fils qui me sourient.
+          </p>
 
-                <p>Je fais les choses à ma façon parce que c’est la seule qui me convient, qui me laisse toute la liberté dont j’ai besoin. Mon travail est instinctif, parfois conventionnel. Je traite le tissu selon ce qu’il m’inspire ou me rappelle. Mes sujets sont simples, réels, infinis et pourtant aussi différents que tous les paysages qui nourrissent mes souvenirs. </p>
+          <p>
+            Mes sujets sont simples, réels, infinis, aussi différents que les
+            paysages qui nourrissent mes souvenirs; mon travail instinctif,
+            parfois conventionnel; mon atelier minuscule. Dans cette oasis de
+            tranquillité, de silence et de paix je me reconnecte avec mon passé
+            pour recréer des bouts de vie. Simplement.
+          </p>
 
-                <p></p>
-            </div>
+          <p></p>
         </div>
+      </div>
     </section>
 
     <!-- Parcours -->
@@ -659,118 +744,186 @@
 
     <!-- Galerie d'œuvres -->
     <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title fade-in">Œuvres</h2>
-            <div class="gallery-grid">
-                <div class="artwork-card fade-in" onclick="openModal('Fragments de mémoire', '2023, Lin et soie sauvage, 120x80cm', 'Série explorant les traces du temps sur la matière textile', 'assets/52x74(1).JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Titre?</h3>
-                        <p class="artwork-details">2023 • Matériel?</p>
-                        <p class="artwork-description">132,08 x 187,96 cm</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title fade-in">Œuvres</h2>
+        <div class="gallery-grid">
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Sérénité', 'Bandes de lin 100% · Bandes de coton 100% · Passe tringle', '132cm x 188cm', 'assets/52x74(1).JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Sérénité</h3>
+              <p class="artwork-details">
+                Bandes de lin 100% · Bandes de coton 100% · Passe tringle
+              </p>
+              <p class="artwork-description">132cm x 188cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Échos silencieux', '2022, Chanvre et teinture indigo, 90x120cm', 'Recherche sur la transmission des savoir-faire', 'assets/100_ lin 29 x 51 droite.JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Titre?</h3>
-                        <p class="artwork-details">Lin</p>
-                        <p class="artwork-description">73,66 x 129,54 cm</p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Fleurs du soir 1/2', 'Bandes de lin 100% · Passe tringle', '74cm x 129.5 cm', 'assets/100_ lin 29x51 gauche.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Fleurs du soir 1/2</h3>
+              <p class="artwork-details">Bandes de lin 100% · Passe tringle</p>
+              <p class="artwork-description">74cm x 129.5 cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Murmures du lin', '2023, Lin brut et dorure à la feuille, 60x80cm', 'Dialogue entre tradition et modernité', 'assets/100_ lin 29x51 gauche.JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Titre?</h3>
-                        <p class="artwork-details">Lin</p>
-                        <p class="artwork-description">73,66 x 129,54 cm</p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Fleurs du soir 2/2', 'Bandes de lin 100% · Passe tringle', '74cm x 129.5 cm', 'assets/100_ lin 29 x 51 droite.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Fleurs du soir 2/2</h3>
+              <p class="artwork-details">Bandes de lin 100% · Passe tringle</p>
+              <p class="artwork-description">74cm x 129.5 cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Seuils', '2021, Installation textile variable, Dimensions variables', 'Installation monumentale sur la notion de passage', 'assets/DSC01387 (2).JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Titre?</h3>
-                        <p class="artwork-details"></p>
-                        <p class="artwork-description"></p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Libellules', 'Bandes de lin 100% · Bandes de coton · 100% Passe tringle', '107cm x 140cm', 'assets/DSC01387 (2).JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Libellules</h3>
+              <p class="artwork-details">
+                Bandes de lin 100% · Bandes de coton · 100% Passe tringle
+              </p>
+              <p class="artwork-description">107cm x 140cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Entrelacs temporels', '2022, Laine feutrée et fils de soie, 100x150cm', 'Méditation sur le temps qui passe', 'assets/Lin et coton 22X69po.JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Titre?</h3>
-                        <p class="artwork-details">Lin et coton</p>
-                        <p class="artwork-description">55,88 x 175,26 cm</p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Feuillage', 'Bandes de lin 100% · Bandes de lin 100% · Suspendre avec des pinces à rideaux', '56cm x 175cm', 'assets/Lin et coton 22X69po.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Feuillage</h3>
+              <p class="artwork-details">
+                Bandes de lin 100% · Bandes de lin 100% · Suspendre avec des
+                pinces à rideaux
+              </p>
+              <p class="artwork-description">56cm x 175cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Traces végétales', '2023, Coton bio et pigments de plantes, 80x100cm', 'Exploration des teintures naturelles locales', 'assets/Lin et coton 50x60po (2).JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Titre?</h3>
-                        <p class="artwork-details">Lin et coton</p>
-                        <p class="artwork-description">127 x 152,4 cm</p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Bord de mer', 'Peut être posé dans les 2 sens, la partie foncée en haut ou en bas · Bandes de lin 100% · Bandes de coton 100% · Suspendre avec des pinces à rideaux', '127cm x 153cm', 'assets/bord_de_mer.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Bord de mer</h3>
+              <p class="artwork-details">
+                Peut être posé dans les 2 sens, la partie foncée en haut ou en
+                bas · Bandes de lin 100% · Bandes de coton 100% · Suspendre avec
+                des pinces à rideaux
+              </p>
+              <p class="artwork-description">127cm x 153cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 2', '', '', 'assets/Foret urbaine- linet coton sur lin 41x29po.JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Fôret urbaine</h3>
-                        <p class="artwork-details">Lin et coton </p>
-                        <p class="artwork-description">104,1 x 73,7 cm</p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Fôret urbaine', 'Coton 100% · lin 100% · Sur base de toile de lin 100% · Repiqué avec du fil à broderie DM · Suspendre avec des pinces à rideaux', '104cm x 74cm', 'assets/Foret urbaine- linet coton sur lin 41x29po.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Fôret urbaine</h3>
+              <p class="artwork-details">
+                Coton 100% · lin 100% · Sur base de toile de lin 100% · Repiqué
+                avec du fil à broderie DM · Suspendre avec des pinces à rideaux
+              </p>
+              <p class="artwork-description">104cm x 74cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 1', '', '', 'assets/Champ_de_lavande.JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Champ de lavande</h3>
-                        <p class="artwork-details"></p>
-                        <p class="artwork-description"></p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Champ de lavande', '100% lin · Passe tringle', '79cm x 166cm', 'assets/Champ_de_lavande.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Champ de lavande</h3>
+              <p class="artwork-details">100% lin · Passe tringle</p>
+              <p class="artwork-description">79cm x 166cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Les couleurs du jour.JPG')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Les couleurs de jour</h3>
-                        <p class="artwork-details"></p>
-                        <p class="artwork-description"></p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Les couleurs de jour', '100% lin · Peut se poser dans les 2 sens · Passe tringle à chaque extrémité', '62cm x 134.5cm', 'assets/Les_couleurs_du_jour.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Les couleurs de jour</h3>
+              <p class="artwork-details">
+                100% lin · Peut se poser dans les 2 sens · Passe tringle à
+                chaque extrémité
+              </p>
+              <p class="artwork-description">62cm x 134.5cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 2.jpg')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Cache-pot</h3>
-                        <p class="artwork-details"></p>
-                        <p class="artwork-description"></p>
-                    </div>
-                </div>
+          <div
+            id="one-artwork-middle"
+            class="artwork-card fade-in"
+            onclick="openModal('Soleil du désert', 'Bandes de lin 100% · Bandes de coton · 100% Passe tringle', '101.5 cm x 180cm', 'assets/Soleil du désert 40x71.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Soleil du désert</h3>
+              <p class="artwork-details">
+                Bandes de lin 100% · Bandes de coton · 100% Passe tringle
+              </p>
+              <p class="artwork-description">101.5 cm x 180cm</p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 1.jpg')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Cache-pot</h3>
-                        <p class="artwork-details"></p>
-                        <p class="artwork-description"></p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Cache-pot', 'coton 100% · points style kantha', '', 'assets/Cache-pot 2.jpg')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Cache-pot</h3>
+              <p class="artwork-details">coton 100% · points style kantha</p>
+              <p class="artwork-description"></p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/Cache-pot 3.jpg')">
-                    <div class="artwork-image"></div>
-                    <div class="artwork-info">
-                        <h3 class="artwork-title">Cache-pot</h3>
-                        <p class="artwork-details"></p>
-                        <p class="artwork-description"></p>
-                    </div>
-                </div>
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Cache-pot', 'coton 100% · points style kantha', '', 'assets/Cache-pot 1.jpg')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Cache-pot</h3>
+              <p class="artwork-details">coton 100% · points style kantha</p>
+              <p class="artwork-description"></p>
+            </div>
+          </div>
 
-                <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/20241112_091841.jpg')">
+          <div
+            class="artwork-card fade-in"
+            onclick="openModal('Cache-pot', 'coton 100% · points style kantha', '', 'assets/Cache-pot 3.jpg')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Cache-pot</h3>
+              <p class="artwork-details">coton 100% · points style kantha</p>
+              <p class="artwork-description"></p>
+            </div>
+          </div>
+
+          <!-- <div class="artwork-card fade-in" onclick="openModal('Cache-pot 3', '', '', 'assets/20241112_091841.jpg')">
                     <div class="artwork-image"></div>
                     <div class="artwork-info">
                         <h3 class="artwork-title"></h3>
@@ -795,135 +948,166 @@
                         <p class="artwork-details"></p>
                         <p class="artwork-description"></p>
                     </div>
-                </div>
-            </div>
+                </div> -->
         </div>
+      </div>
     </section>
 
     <!-- Section Contact -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title fade-in">Contact</h2>
-            <div class="contact-content fade-in">
-                <p>Pour toute information, que ce soit concernant les tarifs, la disponibilité, une commande ou une collaboration, n’hésitez pas à me contacter.</p>
-                
-                <div class="contact-info">
-                    <!--<div class="contact-item">
+      <div class="container">
+        <h2 class="section-title fade-in">Contact</h2>
+        <div class="contact-content fade-in">
+          <p>
+            Pour toute information, que ce soit concernant les tarifs, la
+            disponibilité, une commande ou une collaboration, n’hésitez pas à me
+            contacter.
+          </p>
+
+          <div class="contact-info">
+            <!--<div class="contact-item">
                         <h3>Atelier</h3>
                         <p>15 rue des Artisans<br>75011 Paris</p>
                     </div>-->
-                    
-                    <div class="contact-item">
-                        <h3>Contact</h3>
-                        <p>diane@dianedcogreen.ca<!--<br>téléphone</p>-->
-                    </div>
-                    
-                    <div class="contact-item">
-                        <h3>Réseaux</h3>
-                        <p>
-                          <a href="https://www.instagram.com/diane_decogreen/" target="_blank" rel="noopener">Instagram</a><br>
-                          <a href="https://www.facebook.com/diane.ruest.72651" target="_blank" rel="noopener">Facebook</a>
-                        </p>
-                    </div>
-                </div>
+
+            <div class="contact-item">
+              <h3>Contact</h3>
+              <p>diane@dianedcogreen.ca<!--<br>téléphone</p>--></p>
             </div>
+
+            <div class="contact-item">
+              <h3>Réseaux</h3>
+              <p>
+                <a
+                  href="https://www.instagram.com/diane_decogreen/"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                ><br />
+                <a
+                  href="https://www.facebook.com/diane.ruest.72651"
+                  target="_blank"
+                  rel="noopener"
+                  >Facebook</a
+                >
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Diane Ruest - Artiste Textile. Tous droits réservés. Site web développé par Jean-Sébastien Roy </p>
-        </div>
+      <div class="container">
+        <p>
+          &copy; 2025 Diane Ruest - Artiste Textile. Tous droits réservés. Site
+          web développé par Jean-Sébastien Roy
+        </p>
+      </div>
     </footer>
 
     <!-- Modal -->
     <div id="artworkModal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
-            <div class="modal-image" id="modalImageContainer">
-                <img id="modalImage" src="" alt="" />
-            </div>
-            <h3 id="modalTitle"></h3>
-            <p id="modalDetails"></p>
-            <p id="modalDescription"></p>
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+        <div class="modal-image" id="modalImageContainer">
+          <img id="modalImage" src="" alt="" />
         </div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDetails"></p>
+        <p id="modalDescription"></p>
+      </div>
     </div>
-
+    <button id="backToTop" aria-label="Retour en haut" title="Retour en haut">
+      &#8679;
+    </button>
     <script>
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      // Animation au scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Navigation fluide
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+          }
         });
+      });
 
-        // Navigation fluide
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+      // Fonctions modal
+      function openModal(title, details, description, imageUrl) {
+        const modal = document.getElementById("artworkModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDetails = document.getElementById("modalDetails");
+        const modalDescription = document.getElementById("modalDescription");
+        const modalImage = document.getElementById("modalImage");
 
-        // Fonctions modal
-        function openModal(title, details, description, imageUrl) {
-            const modal = document.getElementById('artworkModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalDetails = document.getElementById('modalDetails');
-            const modalDescription = document.getElementById('modalDescription');
-            const modalImage = document.getElementById('modalImage');
-            
-            modalTitle.textContent = title;
-            modalDetails.textContent = details;
-            modalDescription.textContent = description;
-            modalImage.src = imageUrl || '';
-            modalImage.alt = title;
-            
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+        modalTitle.textContent = title;
+        modalDetails.textContent = details;
+        modalDescription.textContent = description;
+        modalImage.src = imageUrl || "";
+        modalImage.alt = title;
+
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("artworkModal");
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      // Fermer la modal en cliquant à l'extérieur
+      window.addEventListener("click", function (e) {
+        const modal = document.getElementById("artworkModal");
+        if (e.target === modal) {
+          closeModal();
         }
+      });
 
-        function closeModal() {
-            const modal = document.getElementById('artworkModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+      // Animation de la navbar au scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 100) {
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+        } else {
+          navbar.style.background = "rgba(255, 255, 255, 0.95)";
         }
-
-        // Fermer la modal en cliquant à l'extérieur
-        window.addEventListener('click', function(e) {
-            const modal = document.getElementById('artworkModal');
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Animation de la navbar au scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
+      });
+      // Bouton Back to Top
+      const backToTop = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add("visible");
+        } else {
+          backToTop.classList.remove("visible");
+        }
+      });
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     </script>
-</body>
+  </body>
 </html>
