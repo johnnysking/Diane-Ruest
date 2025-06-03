@@ -193,7 +193,7 @@
       .approach-content {
         max-width: 800px;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
       }
 
       .approach-content p {
@@ -540,31 +540,6 @@
         opacity: 1;
         transform: translateY(0);
       }
-      #backToTop {
-        position: fixed;
-        bottom: 32px;
-        right: 24px;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: none;
-        background: var(--secondary-color);
-        color: #fff;
-        font-size: 2rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-        cursor: pointer;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-        z-index: 3000;
-      }
-      #backToTop:hover {
-        background: var(--primary-color);
-      }
-      #backToTop.visible {
-        opacity: 1;
-        pointer-events: auto;
-      }
 
       #one-artwork-middle {
         grid-column: 1 / -1;
@@ -574,6 +549,106 @@
         /* Optionnel : tu peux augmenter la largeur max sur grand écran */
         max-width: 600px;
       }
+      .modal-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.35); /* rectangle semi-transparent noir */
+        border: none;
+        font-size: 2.5rem;
+        color: #fff;
+        cursor: pointer;
+        z-index: 10;
+        padding: 4px 18px;
+        border-radius: 6px; /* coins légèrement arrondis */
+        box-shadow: none;
+        transition: background 0.2s;
+      }
+      .modal-arrow:hover {
+        background: rgba(0, 0, 0, 0.55);
+      }
+      #prevImage {
+        left: 10px;
+      }
+      #nextImage {
+        right: 10px;
+      }
+      .modal-image {
+        position: relative;
+      }
+
+      .drawer-toggle {
+        display: none;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        position: absolute;
+        right: 24px;
+        top: 18px;
+        z-index: 2001;
+        cursor: pointer;
+      }
+
+      .drawer-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 220px;
+        background: #fff;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.08);
+        z-index: 2002;
+        padding-top: 70px;
+        transition: transform 0.3s;
+        transform: translateX(100%);
+      }
+      .drawer-nav.open {
+        display: block;
+        transform: translateX(0);
+      }
+      .drawer-nav ul {
+        list-style: none;
+        padding: 0 20px;
+      }
+      .drawer-nav li {
+        margin-bottom: 1.5rem;
+      }
+      .drawer-nav a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        display: block;
+        padding: 8px 0;
+      }
+      .drawer-nav a:hover {
+        color: var(--secondary-color);
+      }
+
+      /* Responsive : Drawer visible seulement sur mobile */
+      @media (max-width: 700px) {
+        .navbar ul {
+          display: none !important;
+        }
+        .drawer-toggle {
+          display: block;
+          position: fixed;
+          top: 18px;
+          right: 24px;
+          z-index: 3001;
+        }
+        .nav-container {
+          position: relative;
+        }
+      }
+      @media (min-width: 701px) {
+        .drawer-toggle,
+        .drawer-nav {
+          display: none !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -582,14 +657,25 @@
       <div class="nav-container">
         <a href="#hero" class="logo">Diane Ruest</a>
         <ul>
-          <!--<li><a href="#hero">Accueil</a></li>-->
           <li><a href="#about">À propos</a></li>
           <li><a href="#approach">Démarche</a></li>
-          <!--<li><a href="#journey">Parcours</a></li>-->
           <li><a href="#gallery">Œuvres</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+    </nav>
+    <button class="drawer-toggle" id="drawerToggle" aria-label="Ouvrir le menu">
+      &#9776;
+    </button>
+    <nav class="drawer-nav" id="drawerNav">
+      <ul>
+        <li><a href="#hero" onclick="closeDrawer()">Accueil</a></li>
+        <li><a href="#about" onclick="closeDrawer()">À propos</a></li>
+        <li><a href="#approach" onclick="closeDrawer()">Démarche</a></li>
+        <!-- <li><a href="#journey" onclick="closeDrawer()">Parcours</a></li> -->
+        <li><a href="#gallery" onclick="closeDrawer()">Œuvres</a></li>
+        <li><a href="#contact" onclick="closeDrawer()">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -624,7 +710,7 @@
             <p>
               La nature est ma source première d’inspiration, celle qui
               m’entoure, que je vois tous les jours par la fenêtre de mon
-              atelier, le chant du cardinal ou merle, les couleurs du lever du
+              atelier, le chant du cardinal, du merle, les couleurs du lever du
               jour, le bleu du ciel.
             </p>
 
@@ -831,8 +917,15 @@
           </div>
 
           <div
+            id="foret_urbaine"
             class="artwork-card fade-in"
-            onclick="openModal('Fôret urbaine', 'Coton 100% · lin 100% · Sur base de toile de lin 100% · Repiqué avec du fil à broderie DM · Suspendre avec des pinces à rideaux', '104cm x 74cm', 'assets/Foret urbaine- linet coton sur lin 41x29po.JPG')"
+            onclick="openModal('Fôret urbaine', 'Coton 100% · lin 100% · Sur base de toile de lin 100% · Repiqué avec du fil à broderie DM · Suspendre avec des pinces à rideaux', '104cm x 74cm', 
+            ['assets/Foret urbaine- linet coton sur lin 41x29po.JPG',
+              'assets/foretUrbaine2.jpg',
+              'assets/foretUrbaine3.jpg',
+              'assets/foretUrbaine4.jpg'
+            ]
+            )"
           >
             <div class="artwork-image"></div>
             <div class="artwork-info">
@@ -881,7 +974,7 @@
             <div class="artwork-info">
               <h3 class="artwork-title">Soleil du désert</h3>
               <p class="artwork-details">
-                Bandes de lin 100% · Bandes de coton · 100% Passe tringle
+                Bandes de lin 100% · Bandes de coton 100% · Passe tringle
               </p>
               <p class="artwork-description">101.5 cm x 180cm</p>
             </div>
@@ -1008,20 +1101,35 @@
     </footer>
 
     <!-- Modal -->
+    <!-- Modal -->
     <div id="artworkModal" class="modal">
       <div class="modal-content">
         <button class="close-modal" onclick="closeModal()">&times;</button>
         <div class="modal-image" id="modalImageContainer">
+          <button
+            id="prevImage"
+            class="modal-arrow"
+            style="display: none"
+            aria-label="Image précédente"
+          >
+            &#8592;
+          </button>
           <img id="modalImage" src="" alt="" />
+          <button
+            id="nextImage"
+            class="modal-arrow"
+            style="display: none"
+            aria-label="Image suivante"
+          >
+            &#8594;
+          </button>
         </div>
         <h3 id="modalTitle"></h3>
         <p id="modalDetails"></p>
         <p id="modalDescription"></p>
       </div>
     </div>
-    <button id="backToTop" aria-label="Retour en haut" title="Retour en haut">
-      &#8679;
-    </button>
+
     <script>
       // Animation au scroll
       const observerOptions = {
@@ -1056,18 +1164,55 @@
       });
 
       // Fonctions modal
-      function openModal(title, details, description, imageUrl) {
+      let currentImages = [];
+      let currentIndex = 0;
+
+      function openModal(title, details, description, imageUrls) {
+        // Accept imageUrls as array or string
+        if (typeof imageUrls === "string") imageUrls = [imageUrls];
+
+        currentImages = imageUrls;
+        currentIndex = 0;
+
         const modal = document.getElementById("artworkModal");
         const modalTitle = document.getElementById("modalTitle");
         const modalDetails = document.getElementById("modalDetails");
         const modalDescription = document.getElementById("modalDescription");
         const modalImage = document.getElementById("modalImage");
+        const prevBtn = document.getElementById("prevImage");
+        const nextBtn = document.getElementById("nextImage");
 
         modalTitle.textContent = title;
         modalDetails.textContent = details;
         modalDescription.textContent = description;
-        modalImage.src = imageUrl || "";
-        modalImage.alt = title;
+
+        function updateImage() {
+          modalImage.src = currentImages[currentIndex];
+          modalImage.alt = title + " " + (currentIndex + 1);
+          prevBtn.style.display =
+            currentImages.length > 1 && currentIndex > 0 ? "block" : "none";
+          nextBtn.style.display =
+            currentImages.length > 1 && currentIndex < currentImages.length - 1
+              ? "block"
+              : "none";
+        }
+
+        prevBtn.onclick = function (e) {
+          e.stopPropagation();
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateImage();
+          }
+        };
+        nextBtn.onclick = function (e) {
+          e.stopPropagation();
+          if (currentIndex < currentImages.length - 1) {
+            currentIndex++;
+            updateImage();
+          }
+        };
+
+        updateImage();
 
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
@@ -1096,17 +1241,32 @@
           navbar.style.background = "rgba(255, 255, 255, 0.95)";
         }
       });
-      // Bouton Back to Top
-      const backToTop = document.getElementById("backToTop");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTop.classList.add("visible");
-        } else {
-          backToTop.classList.remove("visible");
-        }
+
+      // Drawer menu mobile
+      const drawerToggle = document.getElementById("drawerToggle");
+      const drawerNav = document.getElementById("drawerNav");
+
+      drawerToggle.addEventListener("click", function () {
+        drawerNav.classList.toggle("open");
+        document.body.style.overflow = drawerNav.classList.contains("open")
+          ? "hidden"
+          : "";
       });
-      backToTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+
+      function closeDrawer() {
+        drawerNav.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      // Fermer le drawer si on clique en dehors
+      window.addEventListener("click", function (e) {
+        if (
+          drawerNav.classList.contains("open") &&
+          !drawerNav.contains(e.target) &&
+          e.target !== drawerToggle
+        ) {
+          closeDrawer();
+        }
       });
     </script>
   </body>
