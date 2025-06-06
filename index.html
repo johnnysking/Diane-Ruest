@@ -333,14 +333,22 @@
       }
 
       .artwork-card:nth-child(11) .artwork-image {
-        background-image: url("assets/Cache-pot\ 2.jpg");
+        background-image: url("assets/chocolat_et_bleuet.jpg");
       }
 
       .artwork-card:nth-child(12) .artwork-image {
-        background-image: url("assets/Cache-pot\ 1.jpg");
+        background-image: url("assets/jardin_japonais.jpg");
       }
 
       .artwork-card:nth-child(13) .artwork-image {
+        background-image: url("assets/Cache-pot\ 2.jpg");
+      }
+
+      .artwork-card:nth-child(14) .artwork-image {
+        background-image: url("assets/Cache-pot\ 1.jpg");
+      }
+
+      .artwork-card:nth-child(15) .artwork-image {
         background-image: url("assets/Cache-pot\ 3.jpg");
       }
       /* 
@@ -541,14 +549,12 @@
         transform: translateY(0);
       }
 
-      #one-artwork-middle {
-        grid-column: 1 / -1;
-        /* Pour la mettre au centre si plusieurs colonnes */
+      /* #one-artwork-middle {
+        grid-column: 1 / -1;        
         margin-left: auto;
-        margin-right: auto;
-        /* Optionnel : tu peux augmenter la largeur max sur grand écran */
+        margin-right: auto;        
         max-width: 600px;
-      }
+      } */
       .modal-arrow {
         position: absolute;
         top: 50%;
@@ -975,6 +981,36 @@
             id="one-artwork-middle"
             class="artwork-card fade-in"
             onclick="openModal('Soleil du désert', 'Bandes de lin 100% · Bandes de coton · 100% Passe tringle', '101.5 cm x 180cm', 'assets/Soleil du désert 40x71.JPG')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Soleil du désert</h3>
+              <p class="artwork-details">
+                Bandes de lin 100% · Bandes de coton 100% · Passe tringle
+              </p>
+              <p class="artwork-description">101.5 cm x 180cm</p>
+            </div>
+          </div>
+
+          <div
+            id="one-artwork-middle"
+            class="artwork-card fade-in"
+            onclick="openModal('Soleil du désert', 'Bandes de lin 100% · Bandes de coton · 100% Passe tringle', '101.5 cm x 180cm', 'assets/chocolat_et_bleuet.jpg')"
+          >
+            <div class="artwork-image"></div>
+            <div class="artwork-info">
+              <h3 class="artwork-title">Soleil du désert</h3>
+              <p class="artwork-details">
+                Bandes de lin 100% · Bandes de coton 100% · Passe tringle
+              </p>
+              <p class="artwork-description">101.5 cm x 180cm</p>
+            </div>
+          </div>
+
+          <div
+            id="one-artwork-middle"
+            class="artwork-card fade-in"
+            onclick="openModal('Soleil du désert', 'Bandes de lin 100% · Bandes de coton · 100% Passe tringle', '101.5 cm x 180cm', 'assets/jardin_japonais.jpg')"
           >
             <div class="artwork-image"></div>
             <div class="artwork-info">
